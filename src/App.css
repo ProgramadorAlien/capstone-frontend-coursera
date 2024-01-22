@@ -37,6 +37,7 @@ nav ul li {
 
 nav ul li a {
   color: #000;
+  font-weight: bold;
 }
 
 nav ul li a:hover{
@@ -70,6 +71,61 @@ nav ul li a:hover{
   transition: all 0.3s ease-in-out;
 }
 
+/*header styles*/
+
+.header{
+
+  background-color: #495E57;
+  padding: 20px 0;
+}
+
+.header section {
+  color: #EDEFEE;
+  padding: 10px 13%;
+  position: relative;
+  }
+
+  h2 {
+    color: #F4CE14;
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .banner-text p {
+    font-size: 16px;
+    max-width: 300px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  .banner-img{
+    position: absolute;
+    right: 13%;
+    top: 15%;
+    width: 400px;
+  }
+
+  .banner-img img {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+  }
+
+.reserve-button{
+background-color: #F4CE14;
+border-radius: 16px;
+color: black;
+padding: 14px 28px;
+border: none;
+text-decoration: none;
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+}
+
 /*when the screen shrinks to (max-width: 768px) menu-icon will be appear*/
 @media screen and (max-width: 768px){
   .menu-icon {
@@ -99,4 +155,9 @@ nav ul li a:hover{
   .bar{
     background: #333333;
   }
+
+  .banner-img{
+    display: none;
+  }
 }
+
