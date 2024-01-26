@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Images/Logo .jpg'
+import logo from '../Images/Logo.png'
 
 const Footer = () => {
     return (
@@ -10,8 +10,7 @@ const Footer = () => {
                     <p>Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally-sourced menu with daily specials.</p>
                 </div>
                 <div>
-                    <h3>Links</h3>
-                    <nav>
+                    <h3>Important Links</h3>
                         <ul>
                             <li><a href='/'>Home</a></li>
                             <li><a href='/'>About</a></li>
@@ -20,19 +19,18 @@ const Footer = () => {
                             <li><a href='/'>Order Online</a></li>
                             <li><a href='/'>Login</a></li>
                         </ul>
-                    </nav>
                 </div>
-
+                <div>
                 <h3>Contact</h3>
                 <ul>
                     <li>Address: <br /> 1234 Anywhere, USA</li>
                     <li>Telephone:<br /> 123-345-7890</li>
                     <li>Email: <br /> littlelemon@mail.com</li>
                 </ul>
-
+                </div>
                 <div>
                     <address>
-                        <h3>Social Media</h3>
+                        <h3>Social Media Links</h3>
                         <ul>
                             <li><a href='/'>Facebook</a></li>
                             <li><a href='/'>Instagram</a></li>
