@@ -176,7 +176,6 @@ cursor: pointer;
 
 .recipe-card {
   background-color: #edefee;
-  height: 700px;
   border-radius: 16px;
 }
 
@@ -190,21 +189,50 @@ cursor: pointer;
 
 
 .menu-content {
-  margin-top: 10px;
+  padding: 5px 15px;
 }
 
 .menu-heading {
   display: grid;
   grid-auto-flow: column;
-  padding-left: 25px;
-}
-
-.menu-content p {
   padding-left: 18px;
   padding-right: 18px;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
 }
 
-/* Add more styles as needed */
+.menu-heading h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-heading p {
+  color: #ee9972;
+}
+
+.menu-content > p {
+  padding-left: 18px;
+  padding-right: 18px;
+  color:#333333
+}
+
+
+.orderbtn{
+  padding: 5px 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #F4CE14;
+  border-radius: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+
 
 
 
@@ -242,5 +270,13 @@ cursor: pointer;
   .banner-img{
     display: none;
   }
+
+ 
+  .recipes-section {
+    grid-template-columns: 1fr; /* Change to a single column for smaller screens */
+    gap: 30px;
+  }
+
+  
 }
 
