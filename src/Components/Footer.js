@@ -11,22 +11,22 @@ const Footer = () => {
                 </div>
                 <div>
                     <h3>Important Links</h3>
-                        <ul>
-                            <li><a href='/'>Home</a></li>
-                            <li><a href='/'>About</a></li>
-                            <li><a href='/'>Menu</a></li>
-                            <li><a href='/'>Reservation</a></li>
-                            <li><a href='/'>Order Online</a></li>
-                            <li><a href='/'>Login</a></li>
-                        </ul>
+                    <ul>
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/'>About</a></li>
+                        <li><a href='/'>Menu</a></li>
+                        <li><a href='/'>Reservation</a></li>
+                        <li><a href='/'>Order Online</a></li>
+                        <li><a href='/'>Login</a></li>
+                    </ul>
                 </div>
                 <div>
-                <h3>Contact</h3>
-                <ul>
-                    <li>Address: <br /> 1234 Anywhere, USA</li>
-                    <li>Telephone:<br /> 123-345-7890</li>
-                    <li>Email: <br /> littlelemon@mail.com</li>
-                </ul>
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Address: <br /> 1234 Anywhere, USA</li>
+                        <li>Telephone:<br /> 123-345-7890</li>
+                        <li>Email: <br /> littlelemon@mail.com</li>
+                    </ul>
                 </div>
                 <div>
                     <address>
