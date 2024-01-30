@@ -1,16 +1,12 @@
 import React from 'react'
 import Nav from './Nav'
+import BookingForm from './BookingForm';
 
 const Booking = () => {
     return (
         <>
             <Nav />
-            <div>
-                <h1>Booking</h1>
-                <h1>Booking</h1>
-                <h1>Booking</h1>
-                <h1>Booking</h1>
-            </div>
+            <BookingForm />
         </>
     );
 }
