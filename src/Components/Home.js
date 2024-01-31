@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Booking from './Booking';
 
 const Home = () => {
+
     return (
         <>
 
@@ -15,7 +16,6 @@ const Home = () => {
             <Menu />
             <Footer />
 
-           
         </>
     );
 }

@@ -1,13 +1,12 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from 'react';
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, setAvailableTimes, onSubmit }) => {
 
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [guests, setGuests] = useState(1);
     const [occasion, setOccasion] = useState('Birthday');
-    const [availableTimes] = useState(['17:00', '18:00', '20:00', '21:00', '22:00']);
+    
 
     const handleDateChange = (event) => {
         setDate(event.target.value);
@@ -27,7 +26,8 @@ const BookingForm = () => {
 
       const handleSubmit = (event) => {
         event.preventDefault();
-        // Add your reservation submission logic here
+        const formData = { date, time, guests, occasion };
+        onSubmit(formData);
       };
 
     return (
