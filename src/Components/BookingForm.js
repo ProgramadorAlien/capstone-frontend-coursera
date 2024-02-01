@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const BookingForm = ({ availableTimes, setAvailableTimes, onSubmit }) => {
+const BookingForm = ({ availableTimes, dispatch, onSubmit }) => {
 
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
@@ -9,7 +9,9 @@ const BookingForm = ({ availableTimes, setAvailableTimes, onSubmit }) => {
     
 
     const handleDateChange = (event) => {
-        setDate(event.target.value);
+        const selectedDate = event.target.value;
+        setDate(selectedDate);
+        dispatch(selectedDate); // Dispatch the selected date to update available times
       };
 
     const handleTimeChange = (event) => {
