@@ -251,6 +251,54 @@ cursor: pointer;
   cursor: pointer;
 }
 
+/*BookingForm*/
+.grid-form-container{
+  display: grid;
+  margin: 10px 13%;
+}
+
+.booking-form {
+  display: grid;
+  grid-auto-flow: row;
+  max-width: 300px; /* Set a max-width as needed */
+  margin-top: 20px;
+  background-color: #F4CE14;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form label {
+  margin-bottom: 5px;
+  color: #495E57;
+}
+
+.booking-form input,
+.booking-form select {
+  margin-bottom: 15px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.booking-form input[type="date"],
+.booking-form input[type="number"],
+.booking-form select {
+  width: 100%;
+}
+
+.booking-form input[type="submit"] {
+  background-color: #495E57;
+  color: #EDEFEE;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.booking-form input[type="submit"]:hover {
+  background-color: #3C4D46;
+}
+
 /*footer styles*/
 
 footer section{

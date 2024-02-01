@@ -1,4 +1,5 @@
 import React, { useState, useReducer } from 'react';
+import '../App.css';
 import Nav from './Nav'
 import BookingForm from './BookingForm';
 
