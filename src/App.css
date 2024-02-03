@@ -257,6 +257,10 @@ cursor: pointer;
   margin: 10px 13%;
 }
 
+.grid-form-container h2{
+  color:#3C4D46
+}
+
 .booking-form {
   display: grid;
   grid-auto-flow: row;

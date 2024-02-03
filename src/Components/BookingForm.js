@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 const BookingForm = ({ availableTimes, dispatch, onSubmit }) => {
-
+    //console.log("Rendering BookingForm"); 
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [guests, setGuests] = useState(1);
@@ -12,7 +12,8 @@ const BookingForm = ({ availableTimes, dispatch, onSubmit }) => {
     const handleDateChange = (event) => {
         const selectedDate = event.target.value;
         setDate(selectedDate);
-        dispatch(selectedDate); // Dispatch the selected date to update available times
+        //dispatch(selectedDate); // Dispatch the selected date to update available times
+        dispatch({ type: 'UPDATE_TIMES', payload: selectedDate }); // Dispatch the selected date to update available times
     };
 
     const handleTimeChange = (event) => {
@@ -35,15 +36,16 @@ const BookingForm = ({ availableTimes, dispatch, onSubmit }) => {
 
     return (
         <main className='grid-form-container'>
+            <div><h2>Make a Reservation</h2></div>
             <form className="booking-form" onSubmit={handleSubmit}>
                 <label htmlFor="res-date">Choose date</label>
                 <input type="date" id="res-date" value={date} onChange={handleDateChange} />
 
                 <label htmlFor="res-time">Choose time</label>
                 <select id="res-time" value={time} onChange={handleTimeChange}>
-                    {availableTimes.map((timeOption) => (
-                        <option key={timeOption}>{timeOption}</option>
-                    ))}
+                {availableTimes.map((timeOption) => (
+                    <option key={timeOption}>{timeOption}</option>
+                )) }
                 </select>
 
                 <label htmlFor="guests">Number of guests</label>
