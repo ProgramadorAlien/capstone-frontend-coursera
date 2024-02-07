@@ -7,6 +7,7 @@ import Nav from './Components/Nav';
 import Menu from './Components/Menu';
 import Footer from './Components/Footer';
 import Booking from './Components/Booking';
+import ConfirmedBooking from './Components/ConfirmedBooking';
 
 
 
@@ -17,7 +18,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
-        {/* Add more routes as needed */}
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
+        <Route path="/nav" element={<Nav />} />
       </Routes>
     
   );

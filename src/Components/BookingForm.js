@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
 
-const BookingForm = ({ availableTimes, dispatch, onSubmit }) => {
-    //console.log("Rendering BookingForm"); 
+const BookingForm = ({ availableTimes, onSubmit }) => {
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [guests, setGuests] = useState(1);
@@ -12,8 +11,6 @@ const BookingForm = ({ availableTimes, dispatch, onSubmit }) => {
     const handleDateChange = (event) => {
         const selectedDate = event.target.value;
         setDate(selectedDate);
-        //dispatch(selectedDate); // Dispatch the selected date to update available times
-        dispatch({ type: 'UPDATE_TIMES', payload: selectedDate }); // Dispatch the selected date to update available times
     };
 
     const handleTimeChange = (event) => {
@@ -43,9 +40,10 @@ const BookingForm = ({ availableTimes, dispatch, onSubmit }) => {
 
                 <label htmlFor="res-time">Choose time</label>
                 <select id="res-time" value={time} onChange={handleTimeChange}>
-                {availableTimes.map((timeOption) => (
-                    <option key={timeOption}>{timeOption}</option>
-                )) }
+                    <option value="">Select a Time</option>
+                    {availableTimes.map((timeOption) => (
+                        <option key={timeOption}>{timeOption}</option>
+                    ))}
                 </select>
 
                 <label htmlFor="guests">Number of guests</label>
@@ -57,11 +55,10 @@ const BookingForm = ({ availableTimes, dispatch, onSubmit }) => {
                     <option>Anniversary</option>
                 </select>
 
-
                 <input type="submit" value="Make Your reservation" />
             </form>
         </main>
     );
 };
 
-export default BookingForm; 
+export default BookingForm;
