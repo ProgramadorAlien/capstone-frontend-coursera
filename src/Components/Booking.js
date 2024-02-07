@@ -6,13 +6,13 @@ import BookingForm from './BookingForm';
 import { fetchAPI, submitAPI } from '../mockAPI';
 import ConfirmedBooking from './ConfirmedBooking';
 
-const initializeTimes  = {
+export const initializeTimes = () => ({
     availableTimes: [],
     loading: true,
     error: null
-};
+});
 
-const updateTimes  = (state, action) => {
+export const updateTimes  = (state, action) => {
     switch (action.type) {
         case 'FETCH_SUCCESS':
             return {
@@ -33,7 +33,7 @@ const updateTimes  = (state, action) => {
 };
 
 const Booking = () => {
-    const [state, dispatch] = useReducer(updateTimes , initializeTimes );
+    const [state, dispatch] = useReducer(updateTimes , initializeTimes());
     const navigate = useNavigate();
 
     useEffect(() => {
