@@ -303,6 +303,50 @@ cursor: pointer;
   background-color: #3C4D46;
 }
 
+/*ConfirmedComponent*/
+.confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.confirm h1 {
+  color: #3C4D46;
+  font-size: 28px;
+}
+
+.confirm h1 span {
+  color: #F4CE14;
+}
+
+.confirm p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #495E57;
+}
+
+.confirm ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.confirm li {
+  margin-bottom: 10px;
+  color: #495E57;
+}
+
+.confirm li:first-child {
+  margin-top: 10px;
+}
+
+.confirm li span {
+  font-weight: bold;
+  color: #3C4D46;
+}
+
+
 /*footer styles*/
 
 footer section{
