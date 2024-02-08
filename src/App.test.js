@@ -1,5 +1,5 @@
 
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent  } from '@testing-library/react';
 import BookingForm from './Components/BookingForm';
 import { updateTimes, initializeTimes } from './Components/Booking'; 
 
@@ -139,4 +139,56 @@ describe('updateTimes function', () => {
         // Assert that the returned state is the same as the initial state
         expect(newState).toEqual(initialState);
     });
+});
+
+
+describe('BookingForm', () => {
+  const availableTimes = ['10:00 AM', '12:00 PM', '2:00 PM'];
+  const onSubmit = jest.fn();
+
+  it('renders with correct attributes', () => {
+      render(<BookingForm availableTimes={availableTimes} onSubmit={onSubmit} />);
+
+      const dateInput = screen.getByLabelText('Choose date');
+      expect(dateInput).toHaveAttribute('type', 'date');
+      expect(dateInput).toBeRequired();
+
+      const timeSelect = screen.getByLabelText('Choose time');
+      expect(timeSelect).toHaveAttribute('id', 'res-time');
+      expect(timeSelect).toHaveValue('');
+      expect(timeSelect).toHaveAttribute('required');
+
+      const guestsInput = screen.getByLabelText('Number of guests');
+      expect(guestsInput).toHaveAttribute('type', 'number');
+      expect(guestsInput).toHaveAttribute('placeholder', '1');
+      expect(guestsInput).toHaveAttribute('min', '1');
+      expect(guestsInput).toHaveAttribute('max', '10');
+      expect(guestsInput).toBeRequired();
+
+      const occasionSelect = screen.getByLabelText('Occasion');
+      expect(occasionSelect).toHaveAttribute('id', 'occasion');
+      expect(occasionSelect).toHaveValue('Birthday');
+  });
+
+  it('updates state on input change', () => {
+      render(<BookingForm availableTimes={availableTimes} onSubmit={onSubmit} />);
+
+      const dateInput = screen.getByLabelText('Choose date');
+      fireEvent.change(dateInput, { target: { value: '2024-02-08' } });
+      expect(dateInput).toHaveValue('2024-02-08');
+
+      const timeSelect = screen.getByLabelText('Choose time');
+      fireEvent.change(timeSelect, { target: { value: '10:00 AM' } });
+      expect(timeSelect).toHaveValue('10:00 AM');
+
+      const guestsInput = screen.getByLabelText('Number of guests');
+      fireEvent.change(guestsInput, { target: { value: '5' } });
+      expect(parseInt(guestsInput.value)).toBe(5); // Parse value to integer for comparison
+
+      const occasionSelect = screen.getByLabelText('Occasion');
+      fireEvent.change(occasionSelect, { target: { value: 'Anniversary' } });
+      expect(occasionSelect).toHaveValue('Anniversary');
+  });
+
+  
 });
